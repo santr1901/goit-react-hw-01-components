@@ -1,10 +1,14 @@
+import ReactDOM from "react-dom/client";
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { App } from 'components/App';
-import './index.css';
+import App from 'App'
+// import user from 'data/user.json';
+// import data from 'data/data.json'
+// import  Profile  from 'components/Profile';
+// import Statistics from 'components/Statistics'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(document.querySelector("#root"));
+root.render(
   <React.StrictMode>
-    <App />
+  <App />
   </React.StrictMode>
-);
+)
