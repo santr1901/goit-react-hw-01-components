@@ -5,7 +5,7 @@ import css from 'components/Transactions/Transactions.module.css'
 export default function TransactionHistory(props) {
   const items = props.items;
   return (
-    <table className="transaction-history">
+    <table className={css.table}>
       <thead>
         <tr>
           <th>Type</th>
