@@ -1,0 +1,26 @@
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 10px 30px;
+    border: 1px solid #2a2a2a;
+}
+
+th{
+    background-color:royalblue;
+}
+
+ tr:nth-child(even) {
+    background-color: gainsboro;
+}
+
+ tr:nth-child(odd) {
+     background-color:  white;
+ }
+
+ tr:hover {
+    background-color: azure;
+ }

@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import css from './Statistics.module.css'
 
 export default function Statistic(props) { 
   const title = props.title;
   return (
-    <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
-      <ul className="stat-list">
+    <section className={css.statistic}>
+      {title && <h2 className={css.title}>{title}</h2>}
+      <ul className={css.stat_list}>
         {props.stats.map(item => 
-          <li className="item" key={item.id}>
-            <span className="label" >{item.label} </span>
-            <span className="percentage" >{item.percentage}%</span>
+          <li className={css.list_item} style={{backgroundColor: `${generateRandomColor()}`}} key={item.id}>
+            <span className={css.label}> {item.label} </span>
+            <span className={css.percentage}> {item.percentage}%</span>
           </li>
           )}
         </ul>
@@ -21,4 +22,13 @@ export default function Statistic(props) {
 
 Statistic.propTypes = {
   title: PropTypes.string,
+}
+
+function generateRandomColor(){
+    let maxVal = 0xFFFFFF; // 16777215
+    let randomNumber = Math.random() * maxVal; 
+    randomNumber = Math.floor(randomNumber);
+    randomNumber = randomNumber.toString(16);
+    let randColor = randomNumber.padStart(6, 0);   
+    return `#${randColor.toUpperCase()}`
 }

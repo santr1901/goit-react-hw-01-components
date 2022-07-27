@@ -1,0 +1,30 @@
+.item {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 10px 5px 5px rgb(73, 72, 72);
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.item :not(:first-child) {
+    margin-left: 10px;
+}
+
+
+.status {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.avatar {
+    background-color:antiquewhite;
+    border-radius: 7px;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+}

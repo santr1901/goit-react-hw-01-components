@@ -2,6 +2,7 @@ import user from 'data/user.json';
 import data from 'data/data.json';
 import friends from 'data/friends.json';
 import transactions from 'data/transactions.json'
+import css from 'index.module.css'
 
 import  Profile  from 'components/Profile/Profile';
 import Statistics from 'components/Statistics/Statistics';
@@ -10,7 +11,7 @@ import TransactionHistory from 'components/Transactions/TransactionHistory'
 
 const App = () => {
     return (
-        <div>
+        <div className={css.App}>
     <Profile
     username={user.username}
     tag={user.tag}
