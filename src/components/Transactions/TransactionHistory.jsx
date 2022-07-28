@@ -1,9 +1,7 @@
 import React from 'react';
-import css from 'components/Transactions/Transactions.module.css'
+import css from './Transactions.module.css';
 
-
-export default function TransactionHistory(props) {
-  const items = props.items;
+export default function TransactionHistory({ items }) {
   return (
     <table className={css.table}>
       <thead>
@@ -15,18 +13,14 @@ export default function TransactionHistory(props) {
       </thead>
 
       <tbody>
-        {items.map(item => 
+        {items.map(item => (
           <tr key={item.id}>
             <td>{item.type}</td>
             <td>{item.amount}</td>
             <td>{item.currency}</td>
-        </tr>
-          )}
-        
+          </tr>
+        ))}
       </tbody>
     </table>
-
-  )
-  
-
+  );
 }
